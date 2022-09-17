@@ -1,4 +1,7 @@
 const fs = require('fs');
+const stream = require('stream');
+const { ReadableStream } = require('stream/web');
+const util = require('util')
 
 let data = '';
 
@@ -13,3 +16,26 @@ redableStream.on('data', function(chunk){
 redableStream.on('end', function(){
     console.log(data)
 })
+
+
+const Transformation = stream.Transform
+
+function Mayus(){
+    Transformation.call(this)
+};
+
+util.inherits(Mayus,Transformation);
+
+Mayus.prototype._transform = function (chunk,codif,cb){
+    const mayusChunk = chunk.toString().toUpperCase();
+    this.push(mayusChunk);
+    cb();
+
+}
+
+const mayus = new Mayus();
+
+redableStream
+.pipe(mayus)
+.pipe(process.stdout)
+
