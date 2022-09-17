@@ -1,0 +1,14 @@
+{
+  "name": "modulos",
+  "version": "1.0.0",
+  "description": "prueba",
+  "main": "npm",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jorge mario mora <jorgemariomoramolina@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "is-odd": "^3.0.1"
+  }
+}
