@@ -3,10 +3,16 @@
     "build": "gulp build",
     "liveserver": "liveserver",
     "start": "gulp"
-    
   },
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-server-livereload": "^1.9.2"
-  }
+  },
+  "name": "elctro",
+  "version": "1.0.0",
+  "main": "gulp.js",
+  "devDependencies": {},
+  "author": "jorge mario mora <jorgemariomoramolina@gmail.com>",
+  "license": "MIT",
+  "description": ""
 }
